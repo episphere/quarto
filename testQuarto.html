@@ -67,6 +67,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="testQuarto_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="testQuarto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="testQuarto_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script type="module" src="testQuarto_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="testQuarto_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
 </head>
@@ -115,9 +117,126 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
 </section>
+<section id="observable-js" class="level2">
+<h2 class="anchored" data-anchor-id="observable-js">Observable JS</h2>
+<p>Starting the exploration in the same place I’d like to finish: with code injection in a web application.</p>
+<section id="using-ojs-cells" class="level3">
+<h3 class="anchored" data-anchor-id="using-ojs-cells">Using OJS cells</h3>
+<p>Coding as if this was observablehq</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-startfrom="37" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 36;"><span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>meaningOfLife <span class="op">=</span>{</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> x <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">6</span>]</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> dbl <span class="op">=</span> xi<span class="kw">=&gt;</span><span class="dv">2</span><span class="op">*</span>xi<span class="op">;</span> <span class="co">//doubling function</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sum <span class="op">=</span> (x1<span class="op">,</span>x2)<span class="kw">=&gt;</span>x1<span class="op">+</span>x2<span class="op">;</span> <span class="co">//add it all up</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x<span class="op">.</span><span class="fu">map</span>(dbl)<span class="op">.</span><span class="fu">reduce</span>(sum)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>meaningOfLife</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="es6-modules" class="level3">
+<h3 class="anchored" data-anchor-id="es6-modules">ES6 modules</h3>
+<p>Coding as regular JS and importing it as needed. The first example will import Lorena’s PRS calculator.</p>
+<section id="polygenic-risk-score-calculator" class="level4">
+<h4 class="anchored" data-anchor-id="polygenic-risk-score-calculator">Polygenic risk score calculator</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-startfrom="53" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 52;"><span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>PRS <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/prs/export.js'</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  PRS<span class="op">.</span><span class="fu">ui</span>(div)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p>The second example will load GPT sdk, which needs to be authenticated. You can provide the key as ```<code>gpt.check4key(yourSecretKey)</code>```. More at [https://episphere.github.io/gpt/](episphere.github.io/gpt).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-startfrom="63" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>gpt <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/gpt/export.js'</span>)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.chatUI()</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.key</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<p>Use authenticated gpt module to generate embedings for a string</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-startfrom="72" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 71;"><span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>hello <span class="op">=</span> gpt<span class="op">.</span><span class="fu">embeddings</span>(<span class="st">"hello world!"</span>)</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>hello</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-4-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p>Embed application in a div:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-startfrom="78" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 77;"><span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>  gpt<span class="op">.</span><span class="fu">chatUI</span>(div)</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-5" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
 
 </main>
 <!-- /main column -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"meaningOfLife ={\n  let x = [1,2,3,4,5,6]\n  let dbl = xi=>2*xi; //doubling function\n  let sum = (x1,x2)=>x1+x2; //add it all up\n  return x.map(dbl).reduce(sum)\n}\nmeaningOfLife\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"PRS = await import('https://episphere.github.io/prs/export.js')\n{\n  let div = DOM.element('div')\n  PRS.ui(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"gpt = await import('https://episphere.github.io/gpt/export.js')\n//gpt.chatUI()\n//gpt.key\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"hello = gpt.embeddings(\"hello world!\")\nhello\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"{\n  let div = DOM.element('div')\n  gpt.chatUI(div)\n  return div\n}\n"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../..";
+window._ojs.paths.runtimeToRoot = "../../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

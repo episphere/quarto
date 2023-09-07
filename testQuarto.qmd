@@ -24,3 +24,63 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+## Observable JS
+
+Starting the exploration in the same place I'd like to finish: with code injection in a web application.
+
+### Using OJS cells
+
+Coding as if this was observablehq
+
+```{ojs}
+meaningOfLife ={
+  let x = [1,2,3,4,5,6]
+  let dbl = xi=>2*xi; //doubling function
+  let sum = (x1,x2)=>x1+x2; //add it all up
+  return x.map(dbl).reduce(sum)
+}
+meaningOfLife
+```
+
+### ES6 modules
+
+Coding as regular JS and importing it as needed. The first example will import Lorena's PRS calculator.
+
+#### Polygenic risk score calculator
+
+```{ojs}
+PRS = await import('https://episphere.github.io/prs/export.js')
+{
+  let div = DOM.element('div')
+  PRS.ui(div)
+  return div
+}
+```
+
+The second example will load GPT sdk, which needs to be authenticated. You can provide the key as \`\`\``gpt.check4key(yourSecretKey)`\`\`\`. More at \[https://episphere.github.io/gpt/\](episphere.github.io/gpt).
+
+```{ojs}
+gpt = await import('https://episphere.github.io/gpt/export.js')
+//gpt.chatUI()
+//gpt.key
+```
+
+Use authenticated gpt module to generate embedings for a string
+
+```{ojs}
+hello = gpt.embeddings("hello world!")
+hello
+```
+
+Embed application in a div:
+
+```{ojs}
+{
+  let div = DOM.element('div')
+  gpt.chatUI(div)
+  return div
+}
+```
+
+## 
