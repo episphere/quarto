@@ -13,7 +13,7 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
-1 + 1
+1 + 10
 ```
 
 You can add options to executable code like this
@@ -37,8 +37,8 @@ Coding as if this was observablehq
 meaningOfLife ={
   let x = [1,2,3,4,5,6]
   let dbl = xi=>2*xi; //doubling function
-  let sum = (x1,x2)=>x1+x2; //add it all up
-  return x.map(dbl).reduce(sum)
+  let sum = (x1,x2)=>x1+x2; //add it all upreturn x.map(dbl).reduce(sum)
+  
 }
 meaningOfLife
 ```
@@ -63,6 +63,7 @@ The second example will load GPT sdk, which needs to be authenticated. You can p
 ```{ojs}
 gpt = await import('https://episphere.github.io/gpt/export.js')
 //gpt.chatUI()
+gpt.check4key("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")
 //gpt.key
 ```
 
