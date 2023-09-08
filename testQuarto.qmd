@@ -63,7 +63,7 @@ The second example will load GPT sdk, which needs to be authenticated. You can p
 ```{ojs}
 gpt = await import('https://episphere.github.io/gpt/export.js')
 //gpt.chatUI()
-gpt.check4key("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")
+//gpt.check4key("")
 //gpt.key
 ```
 

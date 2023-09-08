@@ -176,21 +176,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The second example will load GPT sdk, which needs to be authenticated. You can provide the key as ```<code>gpt.check4key(yourSecretKey)</code>```. More at [https://episphere.github.io/gpt/](episphere.github.io/gpt).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="64" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 63;"><span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>gpt <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/gpt/export.js'</span>)</span>
-<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.chatUI()</span></span>
-<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>gpt<span class="op">.</span><span class="fu">check4key</span>(<span class="st">"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"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-startfrom="63" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>gpt <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/gpt/export.js'</span>)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.chatUI()</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.check4key("")</span></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.key</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-1" data-nodetype="declaration">
+<div id="ojs-cell-3" data-nodetype="declaration">
 
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-2" data-nodetype="expression">
-
-</div>
 </div>
 </div>
 </div>
@@ -236,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </main>
 <!-- /main column -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"meaningOfLife ={\n  let x = [1,2,3,4,5,6]\n  let dbl = xi=>2*xi; //doubling function\n  let sum = (x1,x2)=>x1+x2; //add it all upreturn x.map(dbl).reduce(sum)\n  \n}\nmeaningOfLife\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"PRS = await import('https://episphere.github.io/prs/export.js')\n{\n  let div = DOM.element('div')\n  PRS.ui(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"gpt = await import('https://episphere.github.io/gpt/export.js')\n//gpt.chatUI()\ngpt.check4key(\"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\")\n//gpt.key\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"hello = gpt.embeddings(\"hello world!\")\nhello\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"{\n  let div = DOM.element('div')\n  gpt.chatUI(div)\n  return div\n}\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"meaningOfLife ={\n  let x = [1,2,3,4,5,6]\n  let dbl = xi=>2*xi; //doubling function\n  let sum = (x1,x2)=>x1+x2; //add it all upreturn x.map(dbl).reduce(sum)\n  \n}\nmeaningOfLife\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"PRS = await import('https://episphere.github.io/prs/export.js')\n{\n  let div = DOM.element('div')\n  PRS.ui(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"gpt = await import('https://episphere.github.io/gpt/export.js')\n//gpt.chatUI()\n//gpt.check4key(\"\")\n//gpt.key\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"hello = gpt.embeddings(\"hello world!\")\nhello\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"{\n  let div = DOM.element('div')\n  gpt.chatUI(div)\n  return div\n}\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
