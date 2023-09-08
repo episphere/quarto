@@ -38,7 +38,7 @@ meaningOfLife ={
   let x = [1,2,3,4,5,6]
   let dbl = xi=>2*xi; //doubling function
   let sum = (x1,x2)=>x1+x2; //add it all upreturn x.map(dbl).reduce(sum)
-  
+  return x.map(dbl).reduce(sum)
 }
 meaningOfLife
 ```
@@ -63,7 +63,7 @@ The second example will load GPT sdk, which needs to be authenticated. You can p
 ```{ojs}
 gpt = await import('https://episphere.github.io/gpt/export.js')
 //gpt.chatUI()
-//gpt.check4key("")
+//gpt.check4key("yourSecretKey")
 //gpt.key
 ```
 
@@ -84,4 +84,16 @@ Embed application in a div:
 }
 ```
 
-## 
+### Can you do this in R markdown?
+
+```{ojs}
+{
+  let div = DOM.element('div')
+  div.innerHTML='<input id="xx" size=6 value=2> + <input id="yy" size=6 value=3> = <span id="zz">5</span>'
+  div.querySelector("#xx").oninput=div.querySelector("#yy").oninput=function(){
+    div.querySelector("#zz").textContent=parseFloat(div.querySelector("#xx").value)+parseFloat(div.querySelector("#yy").value)
+  }
+  return div
+}
+
+```
