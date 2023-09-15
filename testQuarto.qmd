@@ -25,6 +25,10 @@ You can add options to executable code like this
 
 The `echo: false` option disables the printing of code (only output is displayed).
 
+```{ojs}
+<
+```
+
 ## Observable JS
 
 Starting the exploration in the same place I'd like to finish: with code injection in a web application.
