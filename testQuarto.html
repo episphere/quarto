@@ -116,26 +116,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
-<div class="quarto-ojs-syntax-error">
-<div class="sourceCode" id="cb4" data-startfrom="28" data-syntax-error-position="0" data-source-offset="9"><pre class="sourceCode numberSource numberLines java code-with-copy"><code class="sourceCode java" style="counter-reset: source-line 27;"><span id="cb4-28"><a href="#cb4-28"></a>```<span class="op">{</span>ojs<span class="op">}</span></span>
-<span id="cb4-29"><a href="#cb4-29"></a><span class="op">&lt;</span></span>
-<span id="cb4-30"><a href="#cb4-30"></a>```</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-OJS Syntax Error (line 29, column 1)Unexpected token
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
-</div>
-</div>
 </section>
 <section id="observable-js" class="level2">
 <h2 class="anchored" data-anchor-id="observable-js">Observable JS</h2>
@@ -144,13 +124,41 @@ OJS Syntax Error (line 29, column 1)Unexpected token
 <h3 class="anchored" data-anchor-id="using-ojs-cells">Using OJS cells</h3>
 <p>Coding as if this was observablehq</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="41" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 40;"><span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>meaningOfLife <span class="op">=</span>{</span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> x <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">6</span>]</span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> dbl <span class="op">=</span> xi<span class="kw">=&gt;</span><span class="dv">2</span><span class="op">*</span>xi<span class="op">;</span> <span class="co">//doubling function</span></span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sum <span class="op">=</span> (x1<span class="op">,</span>x2)<span class="kw">=&gt;</span>x1<span class="op">+</span>x2<span class="op">;</span> <span class="co">//add it all upreturn x.map(dbl).reduce(sum)</span></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x<span class="op">.</span><span class="fu">map</span>(dbl)<span class="op">.</span><span class="fu">reduce</span>(sum)</span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>meaningOfLife</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-startfrom="37" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 36;"><span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>meaningOfLife <span class="op">=</span>{</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> x <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">6</span>]</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> dbl <span class="op">=</span> xi<span class="kw">=&gt;</span><span class="dv">2</span><span class="op">*</span>xi<span class="op">;</span> <span class="co">//doubling function</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> sum <span class="op">=</span> (x1<span class="op">,</span>x2)<span class="kw">=&gt;</span>x1<span class="op">+</span>x2<span class="op">;</span> <span class="co">//add it all upreturn x.map(dbl).reduce(sum)</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x<span class="op">.</span><span class="fu">map</span>(dbl)<span class="op">.</span><span class="fu">reduce</span>(sum)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>meaningOfLife</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="es6-modules" class="level3">
+<h3 class="anchored" data-anchor-id="es6-modules">ES6 modules</h3>
+<p>Coding as regular JS and importing it as needed. The first example will import Lorena’s PRS calculator.</p>
+<section id="polygenic-risk-score-calculator" class="level4">
+<h4 class="anchored" data-anchor-id="polygenic-risk-score-calculator">Polygenic risk score calculator</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-startfrom="53" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 52;"><span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>PRS <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/prs/export.js'</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>  PRS<span class="op">.</span><span class="fu">ui</span>(div)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -166,60 +174,32 @@ OJS Syntax Error (line 29, column 1)Unexpected token
 </div>
 </div>
 </div>
-</section>
-<section id="es6-modules" class="level3">
-<h3 class="anchored" data-anchor-id="es6-modules">ES6 modules</h3>
-<p>Coding as regular JS and importing it as needed. The first example will import Lorena’s PRS calculator.</p>
-<section id="polygenic-risk-score-calculator" class="level4">
-<h4 class="anchored" data-anchor-id="polygenic-risk-score-calculator">Polygenic risk score calculator</h4>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="57" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>PRS <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/prs/export.js'</span>)</span>
-<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
-<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  PRS<span class="op">.</span><span class="fu">ui</span>(div)</span>
-<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
-<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-3-2" data-nodetype="expression">
-
-</div>
-</div>
-</div>
-</div>
 <p>The second example will load GPT sdk, which needs to be authenticated. You can provide the key as ```<code>gpt.check4key(yourSecretKey)</code>```. More at [https://episphere.github.io/gpt/](episphere.github.io/gpt).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" data-startfrom="67" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 66;"><span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>gpt <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/gpt/export.js'</span>)</span>
-<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.chatUI()</span></span>
-<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.check4key("yourSecretKey")</span></span>
-<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.key</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-startfrom="63" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 62;"><span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>gpt <span class="op">=</span> <span class="cf">await</span> <span class="im">import</span>(<span class="st">'https://episphere.github.io/gpt/export.js'</span>)</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.chatUI()</span></span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.check4key("yourSecretKey")</span></span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a><span class="co">//gpt.key</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-4" data-nodetype="declaration">
+<div id="ojs-cell-3" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <p>Use authenticated gpt module to generate embedings for a string</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-startfrom="77" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 76;"><span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>hello <span class="op">=</span> gpt<span class="op">.</span><span class="fu">embeddings</span>(<span class="st">"hello world!"</span>)</span>
-<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>hello</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-startfrom="73" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 72;"><span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>hello <span class="op">=</span> gpt<span class="op">.</span><span class="fu">embeddings</span>(<span class="st">"hello world!"</span>)</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>hello</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-5-1" data-nodetype="declaration">
+<div id="ojs-cell-4-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-5-2" data-nodetype="expression">
+<div id="ojs-cell-4-2" data-nodetype="expression">
 
 </div>
 </div>
@@ -227,13 +207,13 @@ OJS Syntax Error (line 29, column 1)Unexpected token
 </div>
 <p>Embed application in a div:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" data-startfrom="83" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 82;"><span id="cb9-83"><a href="#cb9-83" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb9-84"><a href="#cb9-84" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
-<span id="cb9-85"><a href="#cb9-85" aria-hidden="true" tabindex="-1"></a>  gpt<span class="op">.</span><span class="fu">chatUI</span>(div)</span>
-<span id="cb9-86"><a href="#cb9-86" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
-<span id="cb9-87"><a href="#cb9-87" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8" data-startfrom="79" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 78;"><span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>  gpt<span class="op">.</span><span class="fu">chatUI</span>(div)</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-6" data-nodetype="expression">
+<div id="ojs-cell-5" data-nodetype="expression">
 
 </div>
 </div>
@@ -243,16 +223,16 @@ OJS Syntax Error (line 29, column 1)Unexpected token
 <section id="can-you-do-this-in-r-markdown" class="level3">
 <h3 class="anchored" data-anchor-id="can-you-do-this-in-r-markdown">Can you do this in R markdown?</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10" data-startfrom="93" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 92;"><span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
-<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a>  div<span class="op">.</span><span class="at">innerHTML</span><span class="op">=</span><span class="st">'&lt;input id="xx" size=6 value=2&gt; + &lt;input id="yy" size=6 value=3&gt; = &lt;span id="zz"&gt;5&lt;/span&gt;'</span></span>
-<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>  div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#xx"</span>)<span class="op">.</span><span class="at">oninput</span><span class="op">=</span>div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#yy"</span>)<span class="op">.</span><span class="at">oninput</span><span class="op">=</span><span class="kw">function</span>(){</span>
-<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a>    div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#zz"</span>)<span class="op">.</span><span class="at">textContent</span><span class="op">=</span><span class="pp">parseFloat</span>(div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#xx"</span>)<span class="op">.</span><span class="at">value</span>)<span class="op">+</span><span class="pp">parseFloat</span>(div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#yy"</span>)<span class="op">.</span><span class="at">value</span>)</span>
-<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
-<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9" data-startfrom="89" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 88;"><span id="cb9-89"><a href="#cb9-89" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb9-90"><a href="#cb9-90" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> div <span class="op">=</span> DOM<span class="op">.</span><span class="fu">element</span>(<span class="st">'div'</span>)</span>
+<span id="cb9-91"><a href="#cb9-91" aria-hidden="true" tabindex="-1"></a>  div<span class="op">.</span><span class="at">innerHTML</span><span class="op">=</span><span class="st">'&lt;input id="xx" size=6 value=2&gt; + &lt;input id="yy" size=6 value=3&gt; = &lt;span id="zz"&gt;5&lt;/span&gt;'</span></span>
+<span id="cb9-92"><a href="#cb9-92" aria-hidden="true" tabindex="-1"></a>  div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#xx"</span>)<span class="op">.</span><span class="at">oninput</span><span class="op">=</span>div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#yy"</span>)<span class="op">.</span><span class="at">oninput</span><span class="op">=</span><span class="kw">function</span>(){</span>
+<span id="cb9-93"><a href="#cb9-93" aria-hidden="true" tabindex="-1"></a>    div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#zz"</span>)<span class="op">.</span><span class="at">textContent</span><span class="op">=</span><span class="pp">parseFloat</span>(div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#xx"</span>)<span class="op">.</span><span class="at">value</span>)<span class="op">+</span><span class="pp">parseFloat</span>(div<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#yy"</span>)<span class="op">.</span><span class="at">value</span>)</span>
+<span id="cb9-94"><a href="#cb9-94" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-95"><a href="#cb9-95" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> div</span>
+<span id="cb9-96"><a href="#cb9-96" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-7" data-nodetype="expression">
+<div id="ojs-cell-6" data-nodetype="expression">
 
 </div>
 </div>
@@ -263,7 +243,7 @@ OJS Syntax Error (line 29, column 1)Unexpected token
 </main>
 <!-- /main column -->
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"meaningOfLife ={\n  let x = [1,2,3,4,5,6]\n  let dbl = xi=>2*xi; //doubling function\n  let sum = (x1,x2)=>x1+x2; //add it all upreturn x.map(dbl).reduce(sum)\n  return x.map(dbl).reduce(sum)\n}\nmeaningOfLife\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"PRS = await import('https://episphere.github.io/prs/export.js')\n{\n  let div = DOM.element('div')\n  PRS.ui(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"gpt = await import('https://episphere.github.io/gpt/export.js')\n//gpt.chatUI()\n//gpt.check4key(\"yourSecretKey\")\n//gpt.key\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"hello = gpt.embeddings(\"hello world!\")\nhello\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"{\n  let div = DOM.element('div')\n  gpt.chatUI(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-7","inline":false,"source":"{\n  let div = DOM.element('div')\n  div.innerHTML='<input id=\"xx\" size=6 value=2> + <input id=\"yy\" size=6 value=3> = <span id=\"zz\">5</span>'\n  div.querySelector(\"#xx\").oninput=div.querySelector(\"#yy\").oninput=function(){\n    div.querySelector(\"#zz\").textContent=parseFloat(div.querySelector(\"#xx\").value)+parseFloat(div.querySelector(\"#yy\").value)\n  }\n  return div\n}\n\n"}]}
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"meaningOfLife ={\n  let x = [1,2,3,4,5,6]\n  let dbl = xi=>2*xi; //doubling function\n  let sum = (x1,x2)=>x1+x2; //add it all upreturn x.map(dbl).reduce(sum)\n  return x.map(dbl).reduce(sum)\n}\nmeaningOfLife\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"PRS = await import('https://episphere.github.io/prs/export.js')\n{\n  let div = DOM.element('div')\n  PRS.ui(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"gpt = await import('https://episphere.github.io/gpt/export.js')\n//gpt.chatUI()\n//gpt.check4key(\"yourSecretKey\")\n//gpt.key\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"hello = gpt.embeddings(\"hello world!\")\nhello\n"},{"methodName":"interpret","cellName":"ojs-cell-5","inline":false,"source":"{\n  let div = DOM.element('div')\n  gpt.chatUI(div)\n  return div\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-6","inline":false,"source":"{\n  let div = DOM.element('div')\n  div.innerHTML='<input id=\"xx\" size=6 value=2> + <input id=\"yy\" size=6 value=3> = <span id=\"zz\">5</span>'\n  div.querySelector(\"#xx\").oninput=div.querySelector(\"#yy\").oninput=function(){\n    div.querySelector(\"#zz\").textContent=parseFloat(div.querySelector(\"#xx\").value)+parseFloat(div.querySelector(\"#yy\").value)\n  }\n  return div\n}\n\n"}]}
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
