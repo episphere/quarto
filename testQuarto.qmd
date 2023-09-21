@@ -58,7 +58,7 @@ PRS = await import('https://episphere.github.io/prs/export.js')
 }
 ```
 
-The second example will load GPT sdk, which needs to be authenticated. You can provide the key as \`\`\``gpt.check4key(yourSecretKey)`\`\`\`. More at \[https://episphere.github.io/gpt/\](episphere.github.io/gpt).
+The second example will load GPT sdk, which needs to be authenticated. You can provide the key as \`\`\``gpt.check4key(yourSecretKey)`\`\`\`. More at [episphere.github.io/gpt](https://episphere.github.io/gpt).
 
 ```{ojs}
 gpt = await import('https://episphere.github.io/gpt/export.js')
