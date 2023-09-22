@@ -62,7 +62,7 @@ The second example will load GPT sdk, which needs to be authenticated. You can p
 
 ```{ojs}
 gpt = await import('https://episphere.github.io/gpt/export.js')
-//gpt.check4key("yourSecretKey")
+//gpt.check4key("")
 ```
 
 Use authenticated gpt module to generate embedings for a string
