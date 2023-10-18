@@ -1,0 +1,21 @@
+---
+title: "PRS"
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Polygenic relative risk score calculator
+
+Using Observable JavaScript (OJS)
+
+```{ojs}
+PRS = await import('https://episphere.github.io/prs/export.js')
+{
+  let div = DOM.element('div')
+  PRS.ui(div)
+  return div
+}
+```
