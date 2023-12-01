@@ -51,31 +51,6 @@ PRS = await import('https://episphere.github.io/prs/export.js')
   return div
 }
 ```
-
-The second example will load GPT sdk, which needs to be authenticated. You can provide the key as \`\`\``gpt.check4key(yourSecretKey)`\`\`\`. More at [episphere.github.io/gpt](https://episphere.github.io/gpt).
-
-```{ojs}
-gpt = await import('https://episphere.github.io/gpt/export.js')
-gpt.check4key("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")
-```
-
-Use authenticated gpt module to generate embedings for a string
-
-```{ojs}
-hello = gpt.embeddings("hello world!")
-hello
-```
-
-Embed application in a div:
-
-```{ojs}
-{
-  let div = DOM.element('div')
-  gpt.chatUI(div)
-  return div
-}
-```
-
 ### Can you do this in R markdown?
 
 ```{ojs}
